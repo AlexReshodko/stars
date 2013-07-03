@@ -1,0 +1,27 @@
+users:
+  - id
+  - email
+  - password
+  - accept_date
+  - profile_id
+
+exchanges:
+  - id
+  - from
+  - to
+  - comment
+  - stars
+  - date
+  
+profiles:
+  - id
+  - user_id
+  - name
+  - surname
+  - phone
+  - about
+  
+level_system:
+  - id
+  - work_time
+  - stars_num
