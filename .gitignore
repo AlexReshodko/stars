@@ -1,3 +1,5 @@
 assets/
 protected/runtime/
 /framework
+/nbproject/private/
+/nbproject

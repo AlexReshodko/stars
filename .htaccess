@@ -1,0 +1,27 @@
+# Do not remove this line or mod_rewrite rules and search engine friendly URLs will stop working
+RewriteBase /
+
+AddDefaultCharset UTF-8
+<Files *.html>
+	Order deny,allow
+	Deny from all
+	Allow from 127.0.0.1
+</Files>
+
+<Files web.config>
+	Order deny,allow
+	Deny from all
+</Files>
+
+<IfModule mod_rewrite.c>	
+        Options +FollowSymLinks
+        IndexIgnore */*
+        RewriteEngine on
+        # Make the backend accessible via url: http://site/backend.
+        RewriteRule ^backend backend.php
+
+        # If a directory or a file exists, use it directly.
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+        RewriteRule . index.php
+</IfModule>
