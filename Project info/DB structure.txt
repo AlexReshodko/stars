@@ -4,6 +4,7 @@ users:
   - password
   - accept_date
   - profile_id
+  - role
 
 exchanges:
   - id
