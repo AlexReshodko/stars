@@ -31,8 +31,19 @@ class SiteController extends Controller
 		// using the default layout 'protected/views/layouts/main.php'
 		$this->render('index');
 	}
+        
+        public function actionInstall(){
+            $model = new Users();
+            if(isset($_POST['Users'])){
+                $model->attributes = $_POST['users'];
+                if($model->validate() && $model->save()){
+                    echo 'Install completed';
+                }
+            }
+            $this->render('install', array('model'=>$model));
+        }
 
-	/**
+        /**
 	 * This is the action to handle external exceptions.
 	 */
 	public function actionError()
