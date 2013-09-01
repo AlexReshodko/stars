@@ -34,3 +34,5 @@ CREATE TABLE `profiles` (
 	`about`  varchar(255) NULL ,
 	PRIMARY KEY (`id`)
 );
+
+INSERT INTO users VALUES (1, 'root@mail.com', 'rootpass', NOW(), NULL, 'admin');
