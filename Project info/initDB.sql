@@ -35,4 +35,4 @@ CREATE TABLE `profiles` (
 	PRIMARY KEY (`id`)
 );
 
-INSERT INTO users VALUES (1, 'root@mail.com', 'rootpass', NOW(), NULL, 'admin');
+INSERT INTO users VALUES (1, 'root@mail.com', 'f11536bee899541aa233f5c0aa98f625', NOW(), NULL, 'admin'); /* Password "rootpass"*/
