@@ -4,7 +4,7 @@ CREATE TABLE `users` (
 	`password`  varchar(255) NULL ,
 	`accept_date`  datetime NULL ,
 	`profile_id`  int NULL ,
-    `stars`  int NULL ,
+    `stars`  int NULL DEFAULT 0,
 	`role`  varchar(255) NULL ,
 	PRIMARY KEY (`id`)
 );
@@ -36,4 +36,4 @@ CREATE TABLE `profiles` (
 	PRIMARY KEY (`id`)
 );
 
-INSERT INTO users VALUES (1, 'root@mail.com', 'f11536bee899541aa233f5c0aa98f625', NOW(), NULL, 'admin'); /* Password "rootpass"*/
+INSERT INTO users VALUES (1, 'root@mail.com', 'f11536bee899541aa233f5c0aa98f625', NOW(), NULL, 0,'admin'); /* Password "rootpass"*/
