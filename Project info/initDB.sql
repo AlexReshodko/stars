@@ -4,6 +4,7 @@ CREATE TABLE `users` (
 	`password`  varchar(255) NULL ,
 	`accept_date`  datetime NULL ,
 	`profile_id`  int NULL ,
+    `stars`  int NULL ,
 	`role`  varchar(255) NULL ,
 	PRIMARY KEY (`id`)
 );
@@ -21,7 +22,7 @@ CREATE TABLE `exchanges` (
 CREATE TABLE `level_system` (
 	`id`  int NOT NULL AUTO_INCREMENT ,
 	`work_time`  int NULL ,
-	`stars_num`  int NULL ,
+	`stars`  int NULL ,
 	PRIMARY KEY (`id`)
 );
 
